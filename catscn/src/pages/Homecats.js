@@ -23,7 +23,7 @@ const Shop = () => {
   return (
     <div className="App">
 
-<MyAwesomeStuff background="#e76f51"><h1>This is the checkout page</h1></MyAwesomeStuff>
+<MyAwesomeStuff background="#e76f51"><h1>This is the home page</h1></MyAwesomeStuff>
       
     </div>
     

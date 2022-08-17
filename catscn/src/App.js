@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import Home from "./pages/Home";
 import styled from 'styled-components';
+
+import Home from "./pages/Homecats";
+import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
 
 const App = () => {
@@ -8,16 +10,16 @@ const App = () => {
     return (
         <div>
             <BrowserRouter>
-
             <nav>
                     <NavLink to="/">Home</NavLink>
+                    <NavLink to="/shop">Shop</NavLink>
                     <Link to="/checkout">Checkout</Link>
                 </nav>
 
                 <Routes>
                     <Route path="/" element={ <Home /> } />
-                    <Route path="/contact" element={ <Checkout /> } />
-
+                    <Route path="/shop" element={ <Shop /> } />
+                    <Route path="/checkout" element={ <Checkout /> } />
                 </Routes>
             </BrowserRouter>
         </div>
