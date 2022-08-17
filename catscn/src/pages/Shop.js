@@ -20,7 +20,7 @@ const Home = () => {
       try {
         setErrorMsg('')
         // wait for fetch request from API endpoint and store rsponse in variable
-        const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=20');
+        const response = await fetch('https://rickandmortyapi.com/api/character/');
         
         // check to see if the response was successful otherwise throw error
         if(!response.ok){
@@ -56,7 +56,7 @@ const Home = () => {
       {cats.map((rickcats, index) => {
         return (
           <div key={index}>
-            <p>{rickcats.id}</p>
+            <p>{rickcats.name}</p>
           </div>
         )
       })}
