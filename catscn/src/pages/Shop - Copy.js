@@ -6,12 +6,12 @@ import React, { useState, useEffect } from "react";
 import Modal from "./Components/Modal";
 import '../pages/App.css';
 
-const Home = () => {
+const Shop = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [errorMsg, setErrorMsg] = useState('')
-  const [cats, setCats] = useState([])
+  const [characters, setCharacters] = useState([])
 
-// https://rickandmortyapi.com/api/character/
+
   
   // useEffect only runs once when component is first rendered
   useEffect(() => {
@@ -20,7 +20,7 @@ const Home = () => {
       try {
         setErrorMsg('')
         // wait for fetch request from API endpoint and store rsponse in variable
-        const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=20');
+        const response = await fetch('https://rickandmortyapi.com/api/character/');
         
         // check to see if the response was successful otherwise throw error
         if(!response.ok){
@@ -28,7 +28,7 @@ const Home = () => {
         }
         // parse JSON response into normal javascript
         const data = await response.json();
-        setCats(data.results)
+        setCharacters(data.results)
       } catch (error) {
         // catch an error that occurs in the try block
         setErrorMsg("Oops something went wrong...")
@@ -51,12 +51,12 @@ const Home = () => {
 
 
 
-<MyAwesomeStuff background="#e76f51"><h1>Cats</h1></MyAwesomeStuff>
-<MyAwesomeStuff fontsize="10px" background="#2a9d8f"><h1>Cats</h1></MyAwesomeStuff>
-      {cats.map((rickcats, index) => {
+<MyAwesomeStuff background="#e76f51"><h1>This is</h1></MyAwesomeStuff>
+<MyAwesomeStuff fontsize="10px" background="#2a9d8f"><h1>The shopping page</h1></MyAwesomeStuff>
+      {characters.map((rickCharacters, index) => {
         return (
           <div key={index}>
-            <p>{rickcats.id}</p>
+            <p>{rickCharacters.name}</p>
           </div>
         )
       })}
@@ -68,10 +68,10 @@ const Home = () => {
 
 
 
-// const HelloSomething = (cats) => {
+// const HelloSomething = (characters) => {
 //   console.log("hello");
 //   return (
-//     <MyTesting><h1>{cats.name[0]}</h1></MyTesting>
+//     <MyTesting><h1>{characters.name[0]}</h1></MyTesting>
 //   )
 // }
 
@@ -93,6 +93,4 @@ const MyAwesomeStuff = styled.nav`
 // color: white;
 // `
 
-
-
-export default Home;
+export default Shop;
