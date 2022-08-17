@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import styled from 'styled-components';
-import Contact from "./pages/Checkout";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
 
