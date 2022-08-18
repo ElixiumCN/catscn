@@ -7,7 +7,7 @@ import Modal from "./Components/Modal";
 import '../pages/App.css';
 import '../pages/Home.css'
 
-const Home = () => {
+const Shop = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [errorMsg, setErrorMsg] = useState('')
   const [characters, setCharacters] = useState([])
@@ -52,8 +52,8 @@ const Home = () => {
 
 
 
-<MyAwesomeStuff background="#e76f51"><h1>Cats</h1></MyAwesomeStuff>
-<MyAwesomeStuff fontsize="10px" background="#2a9d8f"><h1>Cats</h1></MyAwesomeStuff>
+<MyAwesomeStuff background="#e76f51"><h1>This is</h1></MyAwesomeStuff>
+<MyAwesomeStuff fontsize="10px" background="#2a9d8f"><h1>The shopping page</h1></MyAwesomeStuff>
       {characters.map((rickCharacters, index) => {
         return (
           <div key={index}>
@@ -94,6 +94,4 @@ const MyAwesomeStuff = styled.nav`
 // color: white;
 // `
 
-
-
-export default Home;
+export default Shop;

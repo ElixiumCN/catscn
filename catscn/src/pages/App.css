@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+<<<<<<< HEAD
+
+
+/* .Hom{
+  background-image: url("unknown.png");
+} */
+=======
+* {
+  /* background-image: url("spacer.png"); */
+}
+>>>>>>> 4a178486a245d5676ba21a713bd69cd981b8b258
+
 .App {
   width: 100vw;
   height: 100vh;
