@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 // import Modal from 'react-modal';
 import Modal from "./Components/Modal";
 import '../pages/App.css';
+import '../pages/Home.css'
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -45,7 +46,7 @@ const Home = () => {
   }
 
   return (
-    <div className="App">
+    <div className="homepage">
       <button className="openModalBtn" onClick={() => {setModalOpen(true);}}>Open</button>
       {modalOpen && <Modal setOpenModal={setModalOpen} />}
 
