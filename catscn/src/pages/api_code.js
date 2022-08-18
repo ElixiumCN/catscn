@@ -1,10 +1,5 @@
-//rick
-// import styled from 'styled-components'
+import './App.css';
 import React, { useState, useEffect } from "react";
-// import ReactDOM from 'react-dom';
-// import Modal from 'react-modal';
-// import Modal from "./Components/Modal";
-import '../pages/App.css';
 
 const App = () => {
   const [errorMsg, setErrorMsg] = useState('')
@@ -23,7 +18,7 @@ const App = () => {
         // setCats(data)
         const catData = data.map((cat, index) => {
           return {
-            // name: faker.name.findName(),
+            name: faker.name.findName(),
             catImage: cat.url
           }
         })
@@ -44,11 +39,11 @@ const App = () => {
 
   return (
     <div>
-      <h1>Images</h1>
+      <h1>Cats4Lyf</h1>
       {cats.map((catInfo, index) => {
         return (
           <div key={index}>
-            <img src={catInfo.catImage} alt="cat"/>
+            <img src={catInfo.catImage} alt="a photo of a cat" />
             <p>{catInfo.name}</p> 
           </div>
         )
@@ -57,5 +52,4 @@ const App = () => {
   );
 }
 
-
-export default App;
+export default App; 
