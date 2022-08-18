@@ -47,9 +47,11 @@ const App = () => {
       <h1>Images</h1>
       {cats.map((catInfo, index) => {
         return (
-          <div key={index}>
+          <div className="container">
+          <div className="catpics" key={index}>
             <img src={catInfo.catImage} alt="cat"/>
             <p>{catInfo.name}</p> 
+          </div>
           </div>
         )
       })}

@@ -26,3 +26,20 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.catpics {
+  display: flex;
+  margin: 5px;
+  float: left;
+}
+
+.catpics img {
+  height: 250px;
+  width: 250px;
+}
+
+nav {
+  background: #8d7b6f;
+  width: 100%;
+  overflow: auto;
+}
