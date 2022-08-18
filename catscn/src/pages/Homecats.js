@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import React, { useState, useEffect } from "react";
 // import ReactDOM from 'react-dom';
 // import Modal from 'react-modal';
-import '../pages/Homecats.css';
+import '../pages/App.css';
+
 
 // excessive function copied from other stuff just to get stuff rendered on the page
 
@@ -21,9 +22,10 @@ const Shop = () => {
   }
 
   return (
-    <div className="App">
+    <div className="homepage">
+    
 
-<MyAwesomeStuff background="#e76f51"><h1>This is the home page</h1></MyAwesomeStuff>
+    <h1></h1>
       
     </div>
     
@@ -31,14 +33,6 @@ const Shop = () => {
 }
 
 
-const MyAwesomeStuff = styled.nav`
-background-image: url("unknown.png");
-  background-color: ${(props) => props.background};
-  font-size: ${(props) => props.fontsize};
-  padding: 10px;
-  color: white;
-  height:30%;
-  width:30%;
-`
+
 
 export default Shop;
