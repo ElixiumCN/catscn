@@ -4,6 +4,7 @@ import Navbar from "./pages/Components/Cart";
 import Home from "./pages/Homecats";
 import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
+// import Header from './pages/Components/Sidebar';
 
 const App = () => {
 
@@ -19,11 +20,13 @@ const App = () => {
                     <NavLink to="/shop">Shop</NavLink>
                     <Link to="/checkout">Checkout</Link>
                 </nav>
+                
 
                 <Routes>
+                    
                     <Route path="/" element={ <Home /> } />
                     <Route path="/shop" element={ <Shop /> } />
-                    <Route path="/checkout" element={ <Checkout /> } />
+                    <Route path="/checkout" element={  <Checkout /> } />
                 </Routes>
             </BrowserRouter>
         </div>
