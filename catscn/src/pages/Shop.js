@@ -10,6 +10,12 @@ import Header from './Components/Sidebar';
 const App = () => {
   const [errorMsg, setErrorMsg] = useState('')
   const [ cats, setCats] = useState([])
+  const [modal, setModal] = useState(false)
+
+  const toggleModal = () => {
+    setModal(!modal)
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,13 +51,31 @@ const App = () => {
 
   return (
     <div>
+
       <Header />
       <h1>Images</h1>
+
+      <h1>Browse</h1>
+
       {cats.map((catInfo, index) => {
         return (
           <div className="container">
           <div className="catpics" key={index}>
-            <img src={catInfo.catImage} alt="cat"/>
+            <img className="blur" src={catInfo.catImage} alt="cat"/>
+            <div className="addToCart fade"><button onClick={toggleModal}>More details</button></div>
+            {modal && (
+                          <div className="modal">
+                          <div className="overlay" onClick={toggleModal}></div>
+                          <div className="modal-content">
+                            <h2>Hello Modal</h2>
+                            <p>
+                              catss
+                            </p>
+                            <button className="cloaseBtn" onClick={toggleModal}>Close</button>
+                            <button> Add To Cart</button>
+                          </div>
+                        </div>
+            )}
             <p>{catInfo.name}</p> 
           </div>
           </div>
