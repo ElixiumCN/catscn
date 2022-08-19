@@ -23,6 +23,12 @@ body {
   margin: 0;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .catpics {
   margin: 10px;
   padding: 10px;
