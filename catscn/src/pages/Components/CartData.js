@@ -12,13 +12,13 @@ export const CartData = [
     },
     {
         title: 'Shop',
-        path: '/',
+        path: '/shop',
         icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
     },
     {
         title: 'Basket',
-        path: '/',
+        path: '/checkout',
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'
     },
