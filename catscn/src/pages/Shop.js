@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 // import Modal from 'react-modal';
 // import Modal from "./Components/Modal";
 import '../pages/App.css';
+// import Cart from './Components/Cart';
 
 const App = () => {
   const [errorMsg, setErrorMsg] = useState('')
@@ -51,6 +52,7 @@ const App = () => {
           <div className="catpics" key={index}>
             <img src={catInfo.catImage} alt="cat"/>
             <p>{catInfo.name}</p> 
+
           </div>
           </div>
         )

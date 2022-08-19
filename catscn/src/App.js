@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import styled from 'styled-components';
-
+import Navbar from "./pages/Components/Cart";
 import Home from "./pages/Homecats";
 import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
@@ -8,8 +8,12 @@ import Checkout from "./pages/Checkout";
 const App = () => {
 
     return (
+        
         <div>
             <BrowserRouter>
+<Navbar />
+
+
             <nav>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/shop">Shop</NavLink>
