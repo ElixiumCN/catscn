@@ -6,7 +6,16 @@ import Shop from "./pages/Shop";
 import Checkout from "./pages/Checkout";
 // import Header from './pages/Components/Sidebar';
 
+function clicker() {
+    console.log("hello");
+    
+    };
+    
+    clicker();
+
 const App = () => {
+
+    <div></div>
 
     return (
         
@@ -16,10 +25,11 @@ const App = () => {
 
 
             <nav>
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/shop">Shop</NavLink>
-                    <Link to="/checkout">Checkout</Link>
-                </nav>
+                    <NavLink to="/"><button className="buttontwo" onClick="clicker()">Home</button></NavLink>
+                    <NavLink to="/shop"><button className="buttontwo" onClick="clicker()">Shop</button></NavLink>
+                    <NavLink to="/checkout"><button className="buttontwo" onClick="clicker()">Basket</button></NavLink>
+
+                    </nav>
                 
 
                 <Routes>
@@ -34,11 +44,11 @@ const App = () => {
 
 }
 
+
+
 export default App;
 
 // how to style the link component using styled components
 const NavLink = styled(Link)`
-    background-color: green;
-    padding: 10px 20px;
-    margin: 10px;
+padding: 10px;
 `
