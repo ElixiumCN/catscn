@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import { CartData } from './CartData';
 import './Cart.css';
 
+
 function Navbar() {
     const [sidebar, setSidebar] = useState (false);
-    const showSideBar = () => setSidebar(!sidebar);
+    const showSidebar = () => setSidebar(!sidebar);
 
     return (
         <>
