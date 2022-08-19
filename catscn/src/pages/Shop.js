@@ -44,12 +44,13 @@ const App = () => {
 
   return (
     <div>
-      <h1>Images</h1>
+      <h1>Browse</h1>
       {cats.map((catInfo, index) => {
         return (
           <div className="container">
           <div className="catpics" key={index}>
-            <img src={catInfo.catImage} alt="cat"/>
+            <img className="blur" src={catInfo.catImage} alt="cat"/>
+            <div className="addToCart fade"><button>Add To Cart</button></div>
             <p>{catInfo.name}</p> 
           </div>
           </div>
