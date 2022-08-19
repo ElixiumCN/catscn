@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 // import Modal from 'react-modal';
 import '../pages/App.css';
 import '../pages/Home.css';
-
+import Header from './Components/Sidebar';
 
 // excessive function copied from other stuff just to get stuff rendered on the page
 
@@ -24,7 +24,7 @@ const Shop = () => {
 
   return (
     <div className="homepage">
-    
+    <Header />
 
       
     </div>

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 // import Modal from 'react-modal';
 // import Modal from "./Components/Modal";
 import '../pages/App.css';
+import Header from './Components/Sidebar';
 
 const App = () => {
   const [errorMsg, setErrorMsg] = useState('')
@@ -50,7 +51,12 @@ const App = () => {
 
   return (
     <div>
+
+      <Header />
+      <h1>Images</h1>
+
       <h1>Browse</h1>
+
       {cats.map((catInfo, index) => {
         return (
           <div className="container">

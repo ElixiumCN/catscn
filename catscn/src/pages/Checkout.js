@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // import ReactDOM from 'react-dom';
 // import Modal from 'react-modal';
 import '../pages/App.css';
-
+import Header from './Components/Sidebar';
 // excessive function copied from other stuff just to get stuff rendered on the page
 
 const Shop = () => {
@@ -22,13 +22,14 @@ const Shop = () => {
 
   return (
     <div className="App">
-
+      <Header />
 <MyAwesomeStuff background="#e76f51"><h1>This is the checkout page</h1></MyAwesomeStuff>
       
     </div>
     
   );
 }
+
 
 
 const MyAwesomeStuff = styled.nav`
