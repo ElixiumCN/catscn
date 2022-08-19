@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 // import Modal from "./Components/Modal";
 import '../pages/App.css';
 // import Cart from './Components/Cart';
+import {faker} from '@faker-js/faker';
 
 const App = () => {
   const [errorMsg, setErrorMsg] = useState('')
@@ -30,7 +31,8 @@ const App = () => {
         // setCats(data)
         const catData = data.map((cat, index) => {
           return {
-            // name: faker.name.findName(),
+            name: faker.name.findName(),
+            Cost: faker.commerce.price(),
             catImage: cat.url
           }
         })
@@ -52,9 +54,9 @@ const App = () => {
   return (
     <div>
       <h1>Browse</h1>
+      <div className="container">
       {cats.map((catInfo, index) => {
         return (
-          <div className="container">
           <div className="catpics" key={index}>
             <img className="blur" src={catInfo.catImage} alt="cat"/>
             <div className="addToCart fade"><button onClick={toggleModal}>More details</button></div>
@@ -62,21 +64,19 @@ const App = () => {
                           <div className="modal">
                           <div className="overlay" onClick={toggleModal}></div>
                           <div className="modal-content">
-                            <h2>Hello Modal</h2>
-                            <p>
-                              catss
-                            </p>
+                          <img className="modalCat" src={catInfo.catImage} alt="cat"/>
+                            <h2>{catInfo.name}</h2>
+                            <p>{catInfo.Cost}</p>
                             <button className="cloaseBtn" onClick={toggleModal}>Close</button>
                             <button> Add To Cart</button>
                           </div>
                         </div>
             )}
-            <p>{catInfo.name}</p> 
 
-          </div>
           </div>
         )
       })}
+    </div>
     </div>
   );
 }
